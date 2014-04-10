@@ -21,7 +21,7 @@ class ColName
     col_str = ''
 
     while col > 0
-      col = col.to_i
+      
       # Set remainder from 1 .. 26
       remainder = col % 26
       remainder = 26 if remainder == 0
@@ -34,6 +34,7 @@ class ColName
 
       # Get the next order of magnitude.
       col = (col - 1) / 26
+      col = col.to_i
     end
 
     col_str
